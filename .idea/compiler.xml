@@ -6,11 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="qianghongbao" />
+        <module name="qianghongbao-api" />
+        <module name="qianghongbao-server" />
+        <module name="qianghongbao-model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="qianghongbao" target="1.5" />
+      <module name="qianghongbao" target="1.8" />
+      <module name="qianghongbao-api" target="1.8" />
+      <module name="qianghongbao-model" target="1.8" />
+      <module name="qianghongbao-server" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="qianghongbao-api" options="-parameters" />
+      <module name="qianghongbao-model" options="-parameters" />
+      <module name="qianghongbao-server" options="-parameters" />
+    </option>
   </component>
 </project>
